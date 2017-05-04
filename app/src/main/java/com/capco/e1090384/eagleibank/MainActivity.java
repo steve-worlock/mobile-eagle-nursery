@@ -44,24 +44,28 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     static String TAG = "MainActivity";
     //
     private GoogleApiClient client;
+    //next 3 lines define references to types of object on the screen
     private TextView displaybalance;
     private Button requestbalance;
     private EditText userid;
-    RequestQueue requestQueue;
-    public static final String stringroot = "http://10.0.2.2:3000/api/transactions?id=";
-    public static String stringurl = null;
+    //
+    RequestQueue requestQueue;    // set up a RequestQueue object instance
+    public static final String stringroot = "http://35.176.3.228:3000/api/transactions?id="; // define the root of the api request payload
+    //public static final String stringroot = "http://10.0.2.2:3000/api/transactions?id="; // define the root of the api request payload
+    public static String stringurl = null;  // make sure the api request payload is initialised empty
 
     @Override
+    //do the following as part of instantiating the the main page of app
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        //log onCreate has been reached
-        Log.i(TAG, "onCreate happening!");
-        //
+        //log onCreate has been reached for debugging purposes
+        //Log.i(TAG, "onCreate happening!");
+        // Instantiate GoogleAPIClient using the previously defined reference
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
-        //
+        //instantiate the references as pointing to objects now created on the main screen
         displaybalance = (TextView) (findViewById(R.id.theBalance));
         requestQueue = Volley.newRequestQueue(this);
         requestbalance = (Button) (findViewById(R.id.balancebutton));
@@ -69,39 +73,38 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     @Override
+    // Do this when the button is clicked
     public void onClick(View v) {
-        userid = (EditText) (findViewById(R.id.uidText));
-        String stringuserid = userid.getText().toString();
-        final String stringurl = stringroot + stringuserid;
-        Log.i(TAG, "string url  = " + stringurl);
-      //  sendRequest();
-   // }
-
-///    private void sendRequest() {
-        Log.i(TAG, "string url before  = " + stringurl);
+        userid = (EditText) (findViewById(R.id.uidText));  // capture the user Text entered in Text edit field
+        String stringuserid = userid.getText().toString();  // turn the text into a string
+        final String stringurl = stringroot + stringuserid; // concatenate onto the URL root so that the right balance is retrieved
+        //Log.i(TAG, "string url before  = " + stringurl);   // output the request payload into the log for debugging purposes
+        // build request to API. Note the API request is for all transactions for the user. The balance is then calculated (below)
         JsonArrayRequest request = new JsonArrayRequest(Request.Method.GET, stringurl, (String)null,
                 new Response.Listener<JSONArray>() {
                     @Override
                     public void onResponse(JSONArray response) {
-                        Log.i(TAG, "array 1  = " + response);
+                        //Log.i(TAG, "array 1  = " + response); //output response into log for debugging purposes
                         try {
-                            JSONArray jArray = response;
-                            Log.i(TAG, "array 1  = " + jArray);
-                            String balance = "0";
-                            Double dbalance = 0.0;
+                            JSONArray jArray = response;  // load response into an array
+                            //Log.i(TAG, "array 1  = " + jArray);  // output array to log for debugging purposes
+                            String balance = "0";  // initiate balance calculation variables
+                            Double dbalance = 0.0;  // initiate balance calculation variables
+                            // For each transaction in array convert transaction amount from array string to number and sum
                             for(int i=0; i<jArray.length(); i++) {
                                 JSONObject json_object = (JSONObject)jArray.get(i);
                                 String tranamount = json_object.getString("tranamount");
                                 Double dtranamount= Double.valueOf(tranamount);
-                                dbalance = dbalance +dtranamount;
-                                Log.i(TAG, "tranamount  = " + tranamount);
-                                Log.i(TAG, "dbalance  = " + dbalance);
+                                dbalance = dbalance + dtranamount;
+                                //Log.i(TAG, "tranamount  = " + tranamount);  // show transaction amounts being summed in log for debugging purposes
+                                //Log.i(TAG, "dbalance  = " + dbalance);  // show balance changing in log for debugging purposes
                             }
+                            //PFormatting and rounding of final balance
                             DecimalFormat df = new DecimalFormat("#.##");
                             Double roundbalance = Double.valueOf(df.format(dbalance));
                             balance = String.valueOf(roundbalance);
-                            Log.i(TAG, "balance  = " + balance);
-                            displaybalance.setText("Your current balance is: £   " + balance);
+                            //Log.i(TAG, "balance  = " + balance); // show formatted balance in log
+                            displaybalance.setText("Your current balance is: £   " + balance); // output balance to screen
                         } catch(JSONException e) {
                             System.out.println(e);
                         }
@@ -114,104 +117,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     }
                 }
         );
-       // JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(stringurl,
-         //       new Response.Listener<JSONArray>() {
-           //         @Override
-       //             public void onResponse(JSONArray response) {
-       //                 Log.i(TAG, "string url  = " + response);
-       //                 try {
-       //                     JSONArray jsonArray = new JSONArray(response);
-       //                     Log.i(TAG, "jsonArray  = " + jsonArray);
-       //                  //   Log.i(TAG, "jsonArray  = " + response[0]);
-       //                 } catch (JSONException e) {
-        //                    e.printStackTrace();
-        //                }
-        //
-        //                //    showJSON(response);
-        //            }
-        //        },
-        //        new Response.ErrorListener() {
-         //           @Override
-         //           public void onErrorResponse(VolleyError error) {
-         //               Log.i(TAG, "string url  =" + stringurl + error);
-         //               Toast.makeText(MainActivity.this, error.getMessage(), Toast.LENGTH_LONG).show();
-          //          }
-          //      });
-        RequestQueue requestQueue = Volley.newRequestQueue(this);
+         RequestQueue requestQueue = Volley.newRequestQueue(this); // reinitialise requestQueue for next request
         requestQueue.add(request);
     }
-
-    private void showJSON(String json) {
-        ParseJSON pj = new ParseJSON(json);
-        pj.parseJSON();
-        CustomList cl = new CustomList(this, ParseJSON.ids, ParseJSON.custrefs, ParseJSON.trandates, ParseJSON.tranamounts);
-        Log.i(TAG, "string cl  = " + cl);
-      //  theBalance.setAdapter(cl);
-    }
-
-   // protected void balance(View v) {
-        //Get references (set up local variables) for the input and output controls involved
-          // @Override
-           // this is what hppens when its clicked
-           //instantiate a json object request with GET & API url
-           //public void onClick(View v) {
-
-               //Process the input
-               //Turn the user ID entered into a string, ready for url concatanation
-
-               //create a variable that is set when balancebutton is clicked
-            //   StringRequest stringRequest = new StringRequest(stringurl,
-              //         new Response.Listener<String>() {
-                //           @Override
-                  //         public void onResponse(String response) {
-                    //           showJSON(response);
-                  //         }
-                  //     },
-                  //     new Response.ErrorListener() {
-                   //        @Override
-                   //        public void onErrorResponse(VolleyError error) {
-                   //            Toast.makeText(MainActivity.this,error.getMessage(),Toast.LENGTH_LONG).show();
-                   //        }
-                   //    });
-
-
-               //JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, stringurl,
-                       //then a new listener to wait for the response
-                 //      new Response.Listener<JSONObject>() {
-                     //      @Override
-                           //public TextView payload = (TextView) (findViewById(R.id.theBalance));
-                      //     public void onResponse(JSONObject response) {
-                               //this what happens when the response arrives
-                   //            Log.i(TAG, "string URL  = " + stringurl + "response received"+response);
-                     //          double temp = 0.0;
-
-
-                               //JSONTokener result=null;
-                               //JSONArray jArray = null;
-                               //try {
-                               //    jArray = new JSONArray(result);
-                                //     Log.i(TAG, "jArray  = " + jArray);
-                               //} catch (JSONException e1) {
-                               //    e1.printStackTrace();
-                               //}
-                               //double balancesum = 0.0;
-                               //for (int i = 0; i < jArray.length(); i++) {
-                               //    JSONObject jObject = null;
-                               //    try {
-                               //        jObject = jArray.getJSONObject(i);
-                               //    } catch (JSONException e1) {
-                               //        e1.printStackTrace();
-                               //    }
-                               //    double tranamount = 0;
-                               //    try {
-                               //        tranamount = jObject.getDouble("tranamount");
-                               //    } catch (JSONException e1) {
-                               //        e1.printStackTrace();
-                               //    }
-                               //    balancesum = balancesum + tranamount;
-                               //}
-                               //payload.append(Double.toString(balancesum));
-                        //   }
 
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
@@ -228,7 +136,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 .setActionStatus(Action.STATUS_TYPE_COMPLETED)
                 .build();
     }
-
     @Override
     public void onStart() {
         super.onStart();
@@ -238,65 +145,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         client.connect();
         AppIndex.AppIndexApi.start(client, getIndexApiAction());
     }
-
     @Override
     public void onStop() {
         super.onStop();
-
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         AppIndex.AppIndexApi.end(client, getIndexApiAction());
         client.disconnect();
     }
-//},  new Response.ErrorListener() {
-  //                 @Override
-    //               public void onErrorResponse(VolleyError error) {
-      //                 Log.i(TAG, "string URL 2 = " + error + "response received");
-        //           }
-          //         public void OnErrorRespone(VolleyError error) {
-          //                     Log.e("VOLLEY", "ERROR");
-           //                    System.out.println("Please enter your Customer ID");
-           //            Log.i(TAG, "string URL 3 = " + error + "response received");
-           //                }
-        //       }
-       //        );
-       //        requestQueue.add(jsonObjectRequest);
-      //     }
-   //   });
-
-
-
-
-        //Output the result
-        //payload.setText("localhost:3000/api/transactions?id=" + stringuserid);
-
-
- //   FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-   //     fab.setOnClickListener(
-     //           new View.OnClickListener() {
-//
-  //          public void onClick(View view) {
-    //            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-      //                  .setAction("Action", null).show();
-        //    }
-      //  }
-
-        //  Button balancebutton = (Button) (findViewById(R.id.balancebutton));
-        //  balancebutton.setOnClickListener(new View.OnClickListener(){
-        //      public void  onClick(View v) {
-        //          Log.i(TAG, "Button was clicked");
-//
-        //          }});
-
-
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -311,40 +173,4 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         return super.onOptionsItemSelected(item);
     }
-
-    /**
-     * ATTENTION: This was auto-generated to implement the App Indexing API.
-     * See https://g.co/AppIndexing/AndroidStudio for more information.
-     */
-   // public Action getIndexApiAction() {
-     //   Thing object = new Thing.Builder()
-       //         .setName("Main Page") // TODO: Define a title for the content shown.
-                // TODO: Make sure this auto-generated URL is correct.
-     //           .setUrl(Uri.parse("http://[ENTER-YOUR-URL-HERE]"))
-     //           .build();
-     //   return new Action.Builder(Action.TYPE_VIEW)
-     //           .setObject(object)
-     //           .setActionStatus(Action.STATUS_TYPE_COMPLETED)
-     //           .build();
-   // }
-
-  //  @Override
-  //  public void onStart() {
-    //    super.onStart();
-//
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-  //      client.connect();
-   //     AppIndex.AppIndexApi.start(client, getIndexApiAction());
-   // }
-
-//    @Override
- //   public void onStop() {
-  //      super.onStop();
-//
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-    //    AppIndex.AppIndexApi.end(client, getIndexApiAction());
-  //      client.disconnect();
-  //  }
 }

@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\e1090384\AndroidStudioProjects\Eagleibank\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3e04ac8ca644ea7baddf6fdcf72e15c79e9df94a">
+        <dex dex="C:\Users\e1090384\AndroidStudioProjects\Eagleibank\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-ui-25.1.1_ccd3f7ec0adc574d384fc672437e8731e27b8297.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\e1090384\AndroidStudioProjects\Eagleibank\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c03bf57f358aa10d253f21989e93bcf6014b3b17">
+        <dex dex="C:\Users\e1090384\AndroidStudioProjects\Eagleibank\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-25.1.1_63f6ec97619e816e8b31420bfa13be43faf5747e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\e1090384\AndroidStudioProjects\Eagleibank\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="02741d05d4b697fba5e279e9881aaa1da0ca7c7f">
+        <dex dex="C:\Users\e1090384\AndroidStudioProjects\Eagleibank\app\build\intermediates\pre-dexed\debug\com.android.support-support-compat-25.1.1_71288e2b95a081ec16e5d9dc0386ece3de73fde3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\e1090384\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.1.1\support-annotations-25.1.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b59b6ee8d6ecc03e672d253800430343493a6ed8">
+        <dex dex="C:\Users\e1090384\AndroidStudioProjects\Eagleibank\app\build\intermediates\pre-dexed\debug\support-annotations-25.1.1_c21622618c20a2f7b3e0cef9203590e897ed5ae2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\e1090384\AndroidStudioProjects\Eagleibank\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="65d086ee9daaf87b5af62ad24471edafa433354c">
+        <dex dex="C:\Users\e1090384\AndroidStudioProjects\Eagleibank\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-appindexing-8.4.0_4efc0471a3a14347bbadbece68915e68bca88a50.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\e1090384\AndroidStudioProjects\Eagleibank\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ecb496cc08dd52551fc5ec6db3bc0632e95a89bb">
+        <dex dex="C:\Users\e1090384\AndroidStudioProjects\Eagleibank\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-25.1.1_5f7320bff5646a10b5400442c126d4941cfc30cb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\e1090384\AndroidStudioProjects\Eagleibank\app\build\intermediates\exploded-aar\com.android.support\transition\25.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="15b049fedbd8e3926bf99d9e45dfc9b2a1043bb9">
+        <dex dex="C:\Users\e1090384\AndroidStudioProjects\Eagleibank\app\build\intermediates\pre-dexed\debug\com.android.support-transition-25.1.1_2b3f25b13935a3f4d87c9d7286327bdf6b02979a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\e1090384\AndroidStudioProjects\Eagleibank\app\build\intermediates\exploded-aar\com.android.support\design\25.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="cd7951e04cfb9a8bf008d544a478d9a8d8192d38">
+        <dex dex="C:\Users\e1090384\AndroidStudioProjects\Eagleibank\app\build\intermediates\pre-dexed\debug\com.android.support-design-25.1.1_180716e49fcec767dd84ce9dd6542872f23752b3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\e1090384\.gradle\caches\modules-2\files-2.1\com.amazonaws\aws-android-sdk-ec2\2.2.22\949b610303a8d73b383c26b7807d418cdaabca6\aws-android-sdk-ec2-2.2.22.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0949b610303a8d73b383c26b7807d418cdaabca6">
+        <dex dex="C:\Users\e1090384\AndroidStudioProjects\Eagleibank\app\build\intermediates\pre-dexed\debug\aws-android-sdk-ec2-2.2.22_d38d4503fd0badd2511ec75e20d5cc291cfb7914.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\e1090384\.gradle\caches\modules-2\files-2.1\com.amazonaws\aws-android-sdk-ddb\2.2.22\a1e0dd0d91d40d9e67342d3a8bd26f08edaa3549\aws-android-sdk-ddb-2.2.22.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a1e0dd0d91d40d9e67342d3a8bd26f08edaa3549">
+        <dex dex="C:\Users\e1090384\AndroidStudioProjects\Eagleibank\app\build\intermediates\pre-dexed\debug\aws-android-sdk-ddb-2.2.22_3b86515ec1910944fe2ba84c396754899ee13a59.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\e1090384\AndroidStudioProjects\Eagleibank\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="8e673cdfadd8f2d98fdb2fda2285c30f6e449782">
+        <dex dex="C:\Users\e1090384\AndroidStudioProjects\Eagleibank\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-basement-8.4.0_3b39215130d742fe357719c676dae7dede2719d1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\e1090384\AndroidStudioProjects\Eagleibank\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0fb891e8f0cfba0513043a7bb357513d229ca2cd">
+        <dex dex="C:\Users\e1090384\AndroidStudioProjects\Eagleibank\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-utils-25.1.1_be9cb0ea4a6173746b29af9bfdcddbd6e958b272.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\e1090384\AndroidStudioProjects\Eagleibank\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\e1090384\AndroidStudioProjects\Eagleibank\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-25.1.1_bd001f1736f88c0ac5c62fbbe4dcdeb688380143.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\e1090384\.gradle\caches\modules-2\files-2.1\com.amazonaws\aws-android-sdk-sdb\2.2.22\a4fdadb7a47bb1e862110e875fe996518aac3e5e\aws-android-sdk-sdb-2.2.22.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a4fdadb7a47bb1e862110e875fe996518aac3e5e">
+        <dex dex="C:\Users\e1090384\AndroidStudioProjects\Eagleibank\app\build\intermediates\pre-dexed\debug\aws-android-sdk-sdb-2.2.22_76fefe5f7c65d5fefab4ca6f563e8b89e7057ec3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Program Files\Android\Android Studio\gradle\m2repository\com\google\code\gson\gson\2.2.4\gson-2.2.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a60a5e993c98c864010053cb901b7eab25306568">
+        <dex dex="C:\Users\e1090384\AndroidStudioProjects\Eagleibank\app\build\intermediates\pre-dexed\debug\gson-2.2.4_313aff129984a0a45e086871ec03bfcc02e7284e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\e1090384\AndroidStudioProjects\Eagleibank\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e2719c102dca3a7a5b02ce07f769362da6ddb4ab">
+        <dex dex="C:\Users\e1090384\AndroidStudioProjects\Eagleibank\app\build\intermediates\pre-dexed\debug\com.android.support-support-fragment-25.1.1_547b780cc7931dfc36ea4fdc931af5e2cff522ab.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\e1090384\.gradle\caches\modules-2\files-2.1\com.amazonaws\aws-android-sdk-s3\2.2.22\40fe82092e0ae3ca549b132a1e7e876807525176\aws-android-sdk-s3-2.2.22.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="40fe82092e0ae3ca549b132a1e7e876807525176">
+        <dex dex="C:\Users\e1090384\AndroidStudioProjects\Eagleibank\app\build\intermediates\pre-dexed\debug\aws-android-sdk-s3-2.2.22_2f12c3d708ed2350e62d54b44e62d4dbda1a3731.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\e1090384\.gradle\caches\modules-2\files-2.1\com.amazonaws\aws-android-sdk-core\2.2.22\c6789de00db9d1f93faec881fa0c1f5960fb8a15\aws-android-sdk-core-2.2.22.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c6789de00db9d1f93faec881fa0c1f5960fb8a15">
+        <dex dex="C:\Users\e1090384\AndroidStudioProjects\Eagleibank\app\build\intermediates\pre-dexed\debug\aws-android-sdk-core-2.2.22_4c3ae65c45a4ea19941c57a911da037aba66644f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\e1090384\AndroidStudioProjects\Eagleibank\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="7bde4c34162092e0a77e7f12dc85ed77c484cf5c">
+        <dex dex="C:\Users\e1090384\AndroidStudioProjects\Eagleibank\app\build\intermediates\pre-dexed\debug\com.android.support-support-media-compat-25.1.1_27a60d461fb8f2cdd601679951b2763ef3bc5d4c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\e1090384\AndroidStudioProjects\Eagleibank\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0d191c1a09e4892d059e5ce749e4ad4e08129e35">
+        <dex dex="C:\Users\e1090384\AndroidStudioProjects\Eagleibank\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-25.1.1_02dc453724b46455bfe925f7cf87ae4122f39dcc.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\e1090384\AndroidStudioProjects\Eagleibank\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\25.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c9649557905bf7a80fca9e0d54cbcb7662627860">
+        <dex dex="C:\Users\e1090384\AndroidStudioProjects\Eagleibank\app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-25.1.1_efadf2c8eb643accee763e7d88d8ac1de26b6bb1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\e1090384\.gradle\caches\modules-2\files-2.1\com.mcxiaoke.volley\library\1.0.19\a8f23f65fc1e522ee4a1a697ee569901a46741fa\library-1.0.19.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a8f23f65fc1e522ee4a1a697ee569901a46741fa">
+        <dex dex="C:\Users\e1090384\AndroidStudioProjects\Eagleibank\app\build\intermediates\pre-dexed\debug\library-1.0.19_8f1cbe622ce41dce9ebfcf4b5086d627e4c16c44.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\e1090384\.gradle\caches\modules-2\files-2.1\com.amazonaws\aws-android-sdk-cognitoidentityprovider\2.2.22\6ddcf148b81c8a388d17964d78cf3e26f0ae9bc\aws-android-sdk-cognitoidentityprovider-2.2.22.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="06ddcf148b81c8a388d17964d78cf3e26f0ae9bc">
+        <dex dex="C:\Users\e1090384\AndroidStudioProjects\Eagleibank\app\build\intermediates\pre-dexed\debug\aws-android-sdk-cognitoidentityprovider-2.2.22_2cecac1b037cced3d7d643cc156e124679272aec.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\e1090384\AndroidStudioProjects\Eagleibank\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="fef2b3e4b6b1b0e5fe7b69fa137a5fa55a3182ab">
+        <dex dex="C:\Users\e1090384\AndroidStudioProjects\Eagleibank\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-base-8.4.0_4ef84daa935bf3c8021a37602827e1f0e24bed45.jar" />
+    </item>
+
+</items>
